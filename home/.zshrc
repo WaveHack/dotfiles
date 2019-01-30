@@ -1,25 +1,22 @@
-#!/bin/bash
+# Load Antigen
+source ~/.zsh/antigen/antigen.zsh
 
-# History settings
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+# Use oh-my-zsh as base
+antigen use oh-my-zsh
 
-# Options
-setopt appendhistory autocd nomatch
-unsetopt beep
+# Oh-my-zsh plugins
+antigen bundle command-not-found
+antigen bundle colored-man-pages
+antigen bundle git
 
-bindkey -e
+# Custom plugins
 
-zstyle :compinstall filename "$HOME/.zshrc"
+# Load ZSH theme
+antigen theme ys
 
-autoload -Uz compinit promptinit
+# Tell Antigen that you're done.
+antigen apply
 
-compinit
-promptinit
-
-# Set prompt
-prompt walters
-
-# Load aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+# Load additional ZSH config files
+source ~/.zsh/aliases.zsh
+source ~/.zsh/history.zsh
