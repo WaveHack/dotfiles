@@ -4,6 +4,8 @@ Dotfiles for my Arch Linux box (ThinkPad T420).
 
 Trying to keep it simple and mostly terminal-based. Loosely inspired by other people's dotfiles, most notably [Luke Smith](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA)'s.
 
+This stuff is work in progress and subject to change.
+
 ## Applications
 
 - Display Manager: None! Just a regular tty1 console login
