@@ -7,10 +7,14 @@ Trying to keep it simple and mostly terminal-based. Loosely inspired by other pe
 ## Applications
 
 - Display Manager: None! Just a regular tty1 console login
-- Window Manager: `community/i3-gaps` with `community/dmenu` and `aur/polybar`
+- Window Manager: `community/i3-gaps`
+  - Menu Launcher: `community/dmenu` 
+  - Status Bar: `aur/polybar`
 - Shell: `core/bash`
 - Terminal Emulator: `community/rxvt-unicode`
-- Text Editor: `vim` (through `extra/gvim` for X11 support) and visual studio `community/code`
+- Text Editors:
+  - `vim` (through `extra/gvim` for X11 support)
+  - `community/code` (Visual Studio Code)
 - Web Browser: `extra/firefox`
 - File Manager: `aur/lf` (terminal-based)
 - Chat: `community/discord`
