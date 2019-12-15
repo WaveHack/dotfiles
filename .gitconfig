@@ -1,0 +1,14 @@
+[user]
+name = WaveHack
+email = email@wavehack.net
+signingkey = A7FA4F6E
+
+[commit]
+gpgsign = true
+
+[gpg]
+program = gpg2
+
+[alias]
+yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
+

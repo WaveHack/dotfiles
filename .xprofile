@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+# This file runs when a DM logs you into a graphical session.
+# If you use startx/xinit like a Chad, this file will also be sourced.
+
+picom -b     # Compositor
+
+dunst &      # Notification daemon
+nm-applet &  # Network manager tray applet
+unclutter &  # Remove mouse when idle
+
+# Set a nice background
+feh --bg-scale --no-fehbg ~/pictures/wallpapers/current &
+
