@@ -1,6 +1,6 @@
 # Dotfiles
 
-My dotfiles for my Arch GNU/Linux box (ThinkPad T420).
+Dotfiles for my Arch Linux box (ThinkPad T420).
 
 Trying to keep it simple and mostly terminal-based.
 
