@@ -40,7 +40,18 @@ function git_prompt() {
 }
 
 function prompt() {
-  PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;13m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]$(git_prompt)\n\\$ \[$(tput sgr0)\]"
+  last_command_exit_status=$?
+
+  # [user]@[host] [directory] ([git branch]) \n
+  PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;13m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]$(git_prompt)\n"
+
+  # ([last exit status])
+  if [[ $last_command_exit_status != "0" ]]; then
+    PS1+="\[\033[0;31m\]$last_command_exit_status\[\033[0m\] "
+  fi
+
+  # "$ "
+  PS1+="\\$ \[$(tput sgr0)\]"
 }
 
 PROMPT_COMMAND=prompt
