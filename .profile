@@ -2,7 +2,7 @@
 
 # Profile file. Runs on login. Environmental variables are set here.
 
-#export PATH="$PATH:$HOME/.scripts"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export INFOPATH="$HOME/.local/share/info:"
 
 export EDITOR="vim"
