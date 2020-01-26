@@ -58,6 +58,8 @@ PROMPT_COMMAND=prompt
 
 
 # Aliases
+alias pls='sudo !!'
+
 alias ls='ls --color=auto'
 alias l='ls'
 alias ll='ls -hl'
